@@ -4,12 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.youtube.com/iframe_api"></script>
     <title>Youtube Audio Player</title>
   </head>
   <body>
     <div id="app">
+      <div>
+        <input id="playlistTextbox" type="text">
+        <button id="submitPlaylistBtn">Find</button>
+        <span id="message"></span>
+      </div>
+      <div id="player"></div>
+      <div>
+        <input type="range" name="" id="timeline">
+        <div>Текущее время: <span id="currentTime">0:00</span> total time: <span id="totalTime">0:00</span></div>
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+        <button id="stopButton">Stop</button>
+      </div>
       <div id="videoList"></div>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/player.js"></script>
   </body>
 </html>
